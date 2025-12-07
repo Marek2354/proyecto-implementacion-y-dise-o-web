@@ -1,14 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página personal de Marco Montalvo dedicada a deportes, videojuegos y sim racing. Explora pasiones, historia y emoción." />
+    <title>Marco Montalvo - Deportes y Videojuegos</title>
+    <!-- Aquí enlazamos el CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Encabezado con barra de navegación -->
+    <header>
+      <h1>Marco Montalvo</h1>
+      <p>Deportes y videojuegos: pasión, historia y emoción en un solo lugar</p>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#deportes">Deportes</a></li>
+          <li><a href="#videojuegos">Videojuegos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Mi primer web site</title>
-</head>
+    <!-- Carrusel de imágenes -->
+    <section class="carrusel" role="region" aria-label="Carrusel de imágenes destacadas">
+      <div class="slides">
+        <img src="img/beisbol.jpg" alt="Béisbol" loading="lazy" />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_match.jpg"
+          alt="Fútbol"
+          loading="lazy"
+        />
+        <img src="img/f1.jpg" alt="Fórmula 1" loading="lazy" />
+      </div>
+      <!-- Botones -->
+      <button class="prev">⟨</button>
+      <button class="next">⟩</button>
+      <!-- Indicadores -->
+      <div class="indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        
+      </div>
+    </section>
 
-<body>
-  <h1>Bienvenido a mi pagina</h1>
-  <p>Este sera el inicio de mi proyecto.</p>
-</body>
+    <!-- Secciones principales -->
+    <main>
+      <section id="inicio">
+      <h2>Bienvenido</h2>
+      <p>Explora mis pasiones: deportes, videojuegos y sim racing.</p>
+    </section>
 
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy Marco Montalvo, apasionado por el deporte, los videojuegos y la
+        tecnología.
+      </p>
+    </section>
+
+    <section id="deportes">
+      <h2>Deportes</h2>
+      <article>
+        <h3>Béisbol</h3>
+        <p>El béisbol me inspira por su estrategia y trabajo en equipo.</p>
+      </article>
+      <article>
+        <h3>Fútbol</h3>
+        <p>
+          El fútbol es pasión global, me interesa tanto la historia como el
+          análisis táctico.
+        </p>
+      </article>
+      <article>
+        <h3>Fórmula 1</h3>
+        <p>
+          La F1 combina velocidad y tecnología, me atrae la evolución de los
+          autos.
+        </p>
+      </article>
+    </section>
+
+    <section id="videojuegos">
+      <h2>Videojuegos</h2>
+      <article>
+        <h3>Sim Racing</h3>
+        <p>
+          Los simuladores de carreras me permiten vivir la emoción de la pista
+          desde casa.
+        </p>
+      </article>
+      <article>
+        <h3>Otros juegos favoritos</h3>
+        <p>Disfruto títulos que retan mi creatividad y estrategia.</p>
+      </article>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Quieres conversar o colaborar? Escríbeme aquí.</p>
+    </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Marco Montalvo</p>
+    </footer>
+
+    <!-- Aquí va el JavaScript del carrusel -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
