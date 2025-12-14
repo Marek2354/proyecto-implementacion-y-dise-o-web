@@ -1,117 +1,268 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Página personal de Marco Montalvo dedicada a deportes, videojuegos y sim racing. Explora pasiones, historia y emoción." />
     <title>Marco Montalvo - Deportes y Videojuegos</title>
-    <!-- Aquí enlazamos el CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Encabezado con barra de navegación -->
-    <header>
-      <h1>Marco Montalvo</h1>
-      <p>Deportes y videojuegos: pasión, historia y emoción en un solo lugar</p>
-      <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#deportes">Deportes</a></li>
-          <li><a href="#videojuegos">Videojuegos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+  <div class="hero-content text-center">
+    <h1 class="display-3 fw-bold text-light">Pasion por el deporte y la tecnologia</h1>
+    <p class="lead text-light mt-3">Explora mis pasiones: deportes, videojuegos y sim racing en un lugar lleno de historia y emoción.</p>
+  </div>
+</section>
 
-    <!-- Carrusel de imágenes -->
-    <section class="carrusel" role="region" aria-label="Carrusel de imágenes destacadas">
-      <div class="slides">
-        <img src="img/beisbol.jpg" alt="Béisbol" loading="lazy" />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_match.jpg"
-          alt="Fútbol"
-          loading="lazy"
-        />
-        <img src="img/f1.jpg" alt="Fórmula 1" loading="lazy" />
+    <!-- Navegación -->
+    <nav class="menu-section py-5 bg-light">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-auto mb-3">
+                    <a href="#inicio" class="btn btn-primary btn-lg me-3" aria-label="Ir a Inicio"><i class="bi bi-house-door"></i> Inicio</a>
+                </div>
+                <!-- Dropdown de Tecnología -->
+                <div class="col-auto mb-3 dropdown">
+                    <button class="btn btn-primary btn-lg dropdown-toggle me-3" type="button" id="dropdownTecnologia" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menú de Tecnología">
+                        <i class="bi bi-cpu"></i> Tecnología
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownTecnologia">
+                 <li>
+                <a class="dropdown-item" href="https://es.wired.com/" target="_blank" rel="noopener" aria-label="Wired España">
+                Wired
+                </a>
+                </li>
+                    </ul>
+                </div>
+                <!-- Dropdown de Deportes -->
+                <div class="col-auto mb-3 dropdown">
+                    <button class="btn btn-primary btn-lg dropdown-toggle me-3" type="button" id="dropdownDeportes" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menú de Deportes">
+                        <i class="bi bi-trophy"></i> Deportes
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownDeportes">
+                        <li><a class="dropdown-item" href="https://ligamx.net/" target="_blank" rel="noopener" aria-label="Liga MX">Liga MX</a></li>
+                        <li><a class="dropdown-item" href="https://www.legaseriea.it/en" target="_blank" rel="noopener" aria-label="Serie A Italiana">Liga Italiana (Serie A)</a></li>
+                        <li><a class="dropdown-item" href="https://www.laliga.com/en-GB" target="_blank" rel="noopener" aria-label="La Liga Española">La Liga (España)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Dropdown de Videojuegos -->
+                <div class="col-auto mb-3 dropdown">
+                    <button class="btn btn-primary btn-lg dropdown-toggle me-3" type="button" id="dropdownVideojuegos" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menú de Videojuegos">
+                        <i class="bi bi-controller"></i> Videojuegos
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownVideojuegos">
+                        <li><a class="dropdown-item" href="https://www.gran-turismo.com/" target="_blank" rel="noopener" aria-label="Gran Turismo 7">Gran Turismo 7</a></li>
+                        <li><a class="dropdown-item" href="https://www.konami.com/efootball/en/" target="_blank" rel="noopener" aria-label="eFootball">eFootball</a></li>
+                        <li><a class="dropdown-item" href="https://www.gearsofwar.com/" target="_blank" rel="noopener" aria-label="Gears of War">Gears of War</a></li>
+                        <li><a class="dropdown-item" href="https://www.ea.com/games/starwars/jedi-fallen-order" target="_blank" rel="noopener" aria-label="Star Wars Jedi: Fallen Order">Star Wars Jedi: Fallen Order</a></li>
+                        <li><a class="dropdown-item" href="https://www.ea.com/games/starwars/jedi-survivor" target="_blank" rel="noopener" aria-label="Star Wars Jedi: Survivor">Star Wars Jedi: Survivor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel de Deportes -->
+  <section class="my-5">
+  <div id="carouselDeportes" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselDeportes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="MLB"></button>
+      <button type="button" data-bs-target="#carouselDeportes" data-bs-slide-to="1" aria-label="Premier League"></button>
+      <button type="button" data-bs-target="#carouselDeportes" data-bs-slide-to="2" aria-label="F1"></button>
+      <!-- Nuevo indicador para Sim Racing -->
+      <button type="button" data-bs-target="#carouselDeportes" data-bs-slide-to="3" aria-label="Sim Racing"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <!-- MLB -->
+      <div class="carousel-item active">
+        <img src="img/beisbol.jpg" class="d-block w-100" alt="Béisbol">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Major League Baseball</h5>
+          <p>La pasión del béisbol en cada jugada.</p>
+          <a href="https://www.mlb.com/es" target="_blank" class="btn btn-light btn-sm">Visitar MLB</a>
+        </div>
       </div>
-      <!-- Botones -->
-      <button class="prev">⟨</button>
-      <button class="next">⟩</button>
-      <!-- Indicadores -->
-      <div class="indicators">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        
+
+      <!-- Premier League -->
+      <div class="carousel-item">
+        <img src="img/futbol.jpg" class="d-block w-100" alt="Premier League">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Premier League</h5>
+          <p>El fútbol inglés en su máxima expresión.</p>
+          <a href="https://www.premierleague.com/en" target="_blank" class="btn btn-light btn-sm">Visitar Premier League</a>
+        </div>
       </div>
-    </section>
+
+      <!-- Fórmula 1 -->
+      <div class="carousel-item">
+        <img src="img/f1.jpg" class="d-block w-100" alt="Fórmula 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Fórmula 1</h5>
+          <p>Velocidad y tecnología en la pista.</p>
+          <a href="https://www.formula1.com/" target="_blank" class="btn btn-light btn-sm">Visitar F1</a>
+        </div>
+      </div>
+
+<!-- Sim Racing (nuevo) -->
+<div class="carousel-item">
+  <img src="img/simracing.jpg" class="d-block w-100" alt="Sim Racing">
+  <div class="carousel-caption d-none d-md-block">
+    <h5>Sim Racing</h5>
+    <p>Historia y emoción de las carreras virtuales.</p>
+    <a href="https://www.ocioglobalshop.com/blog/simracing/que-es-simracing/" target="_blank" class="btn btn-light btn-sm">
+      Descubrir Sim Racing
+    </a>
+  </div>
+</div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDeportes" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDeportes" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</section>
 
     <!-- Secciones principales -->
-    <main>
-      <section id="inicio">
-      <h2>Bienvenido</h2>
-      <p>Explora mis pasiones: deportes, videojuegos y sim racing.</p>
-    </section>
+    <main class="container my-5">
+        <section id="sobre-mi" class="mb-5 text-center">
+            <h2><i class="bi bi-person-circle"></i> Sobre mí</h2>
+            <p class="lead">Soy Marco Montalvo, apasionado por el deporte, los videojuegos y la tecnología. Mi vida gira en torno a la adrenalina de la competencia y la innovación.</p>
+        </section>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>
-        Soy Marco Montalvo, apasionado por el deporte, los videojuegos y la
-        tecnología.
-      </p>
-    </section>
+        <section id="deportes" class="mb-5">
+            <h2 class="text-center mb-4"><i class="bi bi-trophy-fill"></i> Deportes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Béisbol</h5>
+                            <p class="card-text">El béisbol me inspira por su estrategia y trabajo en equipo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Fútbol</h5>
+                            <p class="card-text">El fútbol es pasión global, me interesa tanto la historia como el análisis táctico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Fórmula 1</h5>
+                            <p class="card-text">La F1 combina velocidad y tecnología, me atrae la evolución de los autos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="deportes">
-      <h2>Deportes</h2>
-      <article>
-        <h3>Béisbol</h3>
-        <p>El béisbol me inspira por su estrategia y trabajo en equipo.</p>
-      </article>
-      <article>
-        <h3>Fútbol</h3>
-        <p>
-          El fútbol es pasión global, me interesa tanto la historia como el
-          análisis táctico.
-        </p>
-      </article>
-      <article>
-        <h3>Fórmula 1</h3>
-        <p>
-          La F1 combina velocidad y tecnología, me atrae la evolución de los
-          autos.
-        </p>
-      </article>
-    </section>
+        <section id="videojuegos" class="mb-5">
+            <h2 class="text-center mb-4"><i class="bi bi-controller-fill"></i> Videojuegos</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Sim Racing</h5>
+                            <p class="card-text">Los simuladores de carreras me permiten vivir la emoción de la pista desde casa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Otros juegos favoritos</h5>
+                            <p class="card-text">Disfruto títulos que retan mi creatividad y estrategia, desde RPGs hasta shooters competitivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="videojuegos">
-      <h2>Videojuegos</h2>
-      <article>
-        <h3>Sim Racing</h3>
-        <p>
-          Los simuladores de carreras me permiten vivir la emoción de la pista
-          desde casa.
-        </p>
-      </article>
-      <article>
-        <h3>Otros juegos favoritos</h3>
-        <p>Disfruto títulos que retan mi creatividad y estrategia.</p>
-      </article>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>¿Quieres conversar o colaborar? Escríbeme aquí.</p>
-    </section>
+        <section id="contacto" class="text-center">
+            <h2><i class="bi bi-chat-dots"></i> Contacto</h2>
+            <p>¿Quieres conversar o colaborar? Escríbeme y hablemos de nuestras pasiones compartidas.</p>
+            <a href="mailto:marco@example.com" class="btn btn-primary btn-lg" aria-label="Enviar email a Marco">Enviar email</a>
+        </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Marco Montalvo</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Marco Montalvo. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- Aquí va el JavaScript del carrusel -->
-    <script src="script.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+    <script>
+        // Función para cargar noticias dinámicamente en el carrusel (ejemplo, se puede expandir con API)
+        function loadCarousel() {
+            const noticias = [
+                {
+                    titulo: "MLB",
+                    descripcion: "Explora la liga de béisbol.",
+                    imagen: "img/beisbol.jpg",
+                    enlace: "https://www.mlb.com/es"
+                },
+                {
+                    titulo: "Premier League",
+                    descripcion: "Noticias y partidos de la liga inglesa.",
+                    imagen: "img/futbol.jpg",
+                    enlace: "https://www.premierleague.com/en/"
+                },
+                {
+                    titulo: "Fórmula 1",
+                    descripcion: "Velocidad y tecnología en la máxima categoría.",
+                    imagen: "img/f1.jpg",
+                    enlace: "https://www.formula1.com/"
+                }
+            ];
+
+            const carouselInner = document.querySelector("#carouselDeportes .carousel-inner");
+            if (!carouselInner) {
+                console.error("Elemento del carrusel no encontrado.");
+                return;
+            }
+
+            // Limpiar carrusel existente (si es necesario, pero en este caso estático)
+            // Para este ejemplo, no modificamos el estático, pero se puede usar para actualizar
+
+            // Aquí se podría actualizar indicadores y controles si se añade más contenido dinámicamente
+        }
+
+        // Ejecutar al cargar la página
+        document.addEventListener("DOMContentLoaded", loadCarousel);
+    </script>
+</body>
 </html>

@@ -1,131 +1,176 @@
-/* Barra de navegación */
-nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
+/* Custom styles to complement Bootstrap */
 
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #222;
-}
-
-nav ul li a:hover {
-    color: #ff6600;
-}
-
-/* Carrusel */
-.carrusel {
-    position: relative;
-    width: 80%;
-    margin: 30px auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slides img {
-    width: 100%;
-    flex-shrink: 0;
-}
-
-/* Botones */
-.carrusel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-}
-
-.carrusel .prev {
-    left: 10px;
-}
-
-.carrusel .next {
-    right: 10px;
-}
-
-/* Indicadores */
-.indicators {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #333;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .carrusel {
-        width: 95%;
-        margin: 20px auto;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    header p {
-        font-size: 0.9em;
-    }
-}
-
-/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+/* Hero section gradient background */
+.hero.bg-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
+/* Menu section spacing */
+.menu-section .btn {
+    transition: transform 0.2s;
+}
+
+.menu-section .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Cards hover effect */
+.card {
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer styling */
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajustes de imágenes del carrusel */
+.carousel-item img {
+    max-height: 400px;   /* altura máxima, ajusta según lo que quieras */
+    object-fit: cover;   /* recorta la imagen manteniendo proporción */
+    width: 100%;         /* ocupa todo el ancho del carrusel */
+}
+
+/* Fondo general con degradado */
+body {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+}
+
+/* Fondo claro para secciones internas */
 main {
-    padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #333;
 }
 
-section {
-    margin-bottom: 40px;
+/* Sección contacto con fondo oscuro */
+#contacto {
+  background-color: #212529;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
+/* Carrusel con sombra y borde redondeado */
+.carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones de navegación con efecto */
+.menu-section .btn {
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+}
+
+.menu-section .btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* Footer con fondo uniforme */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f8f9fa;
+  background-color: #111;
+  color: #ccc;
+}
+
+/* Carrusel estilo hero banner */
+#carouselDeportes {
+  width: 100%;
+  max-width: 100%;
+}
+
+#carouselDeportes .carousel-item img {
+  height: 500px;          /* altura fija del carrusel */
+  object-fit: cover;      /* recorta la imagen manteniendo proporción */
+  width: 100%;            /* ocupa todo el ancho */
+}
+
+/* Fondo semitransparente en captions del carrusel */
+#carouselDeportes .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* negro con 50% transparencia */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Ajuste de texto */
+#carouselDeportes .carousel-caption h5,
+#carouselDeportes .carousel-caption p {
+  color: #fff; /* texto blanco para contraste */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* sombra para mayor legibilidad */
+}
+
+/* Botones dentro del carrusel */
+#carouselDeportes .carousel-caption .btn {
+  background-color: #0d6efd; /* azul Bootstrap */
+  color: #fff;
+  border: none;
+}
+
+#carouselDeportes .carousel-caption .btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Transición suave del carrusel */
+#carouselDeportes .carousel-item {
+  transition: opacity 1s ease-in-out; /* duración y suavidad */
+}
+
+.hero-section {
+  height: 460px; /* altura ideal para que no tape demasiado */
+  background: url("img/hero.jpg") center center no-repeat;
+  background-size: cover; /* recorta lo que sobra y mantiene proporción */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); /* capa oscura para legibilidad */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
 }
